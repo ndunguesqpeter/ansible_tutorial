@@ -5,6 +5,7 @@
   pre_tasks:
 
   - name: install updates (Ubuntu)
+    tags: always
     apt:
       upgrade: dist
       update_cache: yes
@@ -16,6 +17,7 @@
   tasks:  
 
   - name: install apache2 and php packages for ubuntu servers
+    tags: apache,apache2,ubuntu
     apt:
       name: 
         - apache2
@@ -29,6 +31,7 @@
   tasks:
 
   - name: install mariadb package (Ubuntu)
+    tags: db,mariadb,ubuntu
     apt: 
       name: mariadb-server
       state: latest
